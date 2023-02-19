@@ -16,7 +16,8 @@ public class MovePipes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * speed);
+        transform.Translate(Vector2.left * speed*Time.deltaTime);
+        //Time.deltaTime is used to make the game frame independent
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
