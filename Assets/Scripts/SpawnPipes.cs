@@ -17,7 +17,7 @@ public class SpawnPipes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ypos = Random.Range(-1.63f, 1.59f); // randomize the position of pipes
+        Ypos = Random.Range(-2.83f, 2.8f); // randomize the position of pipes
         spawnPos = new Vector3(transform.position.x, Ypos, transform.position.z);
 
         if (timeBtwSpawn <= 0)
