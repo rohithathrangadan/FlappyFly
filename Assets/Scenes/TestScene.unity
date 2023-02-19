@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8babe49080ddb1f408206e9bb5588d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetTimeBtwSpawn: 2
   pipes: {fileID: 2164678520377598193, guid: 719ae6fefe4213c48b1933535eb303ec, type: 3}
 --- !u!1 &1064785063 stripped
 GameObject:
