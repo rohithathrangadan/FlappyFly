@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class ClickPlayButton : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
@@ -21,7 +22,13 @@ public class ClickPlayButton : MonoBehaviour,IPointerDownHandler,IPointerUpHandl
     public void OnPointerUp(PointerEventData eventData)
     {
         _image.sprite = _buttonExpanded;
+        Invoke(nameof(StartGame), 0.5f);
         //_audio.PlayOneShot(ExpandedAudio);
+    }
+
+    void StartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
    public void onClick()
