@@ -3,14 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class Flap : MonoBehaviour
 {
+    public GameObject RestartMenu;
     public float force;
+    float _tempForce;
     Rigidbody2D rb;
     Animator birdAnim;
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         birdAnim = GetComponent<Animator>();
+        birdAnim.enabled = true;
+        _tempForce = force;
     }
 
     // Update is called once per frame
@@ -35,9 +40,18 @@ public class Flap : MonoBehaviour
     {
         Debug.Log("Bird Collision");
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //so getactivescene means the present scene. It will restart the current scene
+        force = 0;
+        birdAnim.enabled = false;
+        OpenRestartMenu();
     }
+
+    void OpenRestartMenu()
+    {
+        RestartMenu.SetActive(true);
+        Time.timeScale = 0;
+        force = _tempForce;
+    }
+
 }

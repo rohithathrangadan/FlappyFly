@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Delete
+  - PipeScore
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bird
+    uniqueID: 4246439243
+    locked: 0
+  - name: RestartMenu
+    uniqueID: 2369399513
     locked: 0

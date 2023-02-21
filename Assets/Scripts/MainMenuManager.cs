@@ -22,7 +22,6 @@ public class MainMenuManager : MonoBehaviour
 
     }
 
-    
 
     public void onClick()
     {
