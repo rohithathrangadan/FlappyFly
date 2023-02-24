@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  _flap: {fileID: 0}
 --- !u!61 &6228443332814721507
 BoxCollider2D:
   m_ObjectHideFlags: 0

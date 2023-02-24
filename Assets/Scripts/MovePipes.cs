@@ -1,27 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MovePipes : MonoBehaviour
 {
     public float speed;
-
+    Flap _flap;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _flap = GameObject.FindGameObjectWithTag("Bird").GetComponent<Flap>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * speed*Time.deltaTime);
+        if (_flap.GetBirdStatus())
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
         //Time.deltaTime is used to make the game frame independent
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Delete")
-        Destroy(gameObject);
+        if (collision.tag == "Delete")
+            Destroy(gameObject);
     }
 }
